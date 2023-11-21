@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+
+    {% if site.google_analytics %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+      </script>
+    {% endif %}
+    <meta charset="UTF-8">
+
+{% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+      
+       <a href="#products" class="btn">Products</a>
+       <a href="#about" class="btn">About Us</a>
+       <a href="#qc" class="btn">Quality & Certification</a>
+       <a href="#clients" class="btn">Clients</a>
+       <a href="#contact" class="btn">Contact</a>
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+    <div class="row">
+     <div class="column">
+      <dl>
+        <dt>Address:</dt>
+        <dt>Office & Works:</dt>
+        <dd>Aluminium Company of Rajnandgaon<br/>4 Industrial Estate<br/>Rajnandgaon, CG - 491441</dd>
+      </dl>
+    <dl>
+      <dt>For Sales and other queries contact us at:</dt>
+      <dd>Phone:  07744-464110<br/>email: &#109;&#097;&#105;&#108;&#064;&#097;&#108;&#099;&#111;&#114;&#046;&#105;&#110;</dd>
+    </dl>
+   </div>
+      <div class="column">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.375795759968!2d81.01717321493379!3d21.09757888596109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xece83fd5a4e8e582!2sAluminium%20Company%20of%20Rajnandgaon!5e0!3m2!1sen!2sin!4v1577378585580!5m2!1sen!2sin" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </div>
+</div>
+      <footer class="site-footer">
+        {% if site.github.is_project_page %}
+          <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
+        {% endif %}
+        <span class="site-footer-credits">© 2020 Aluminium Company of Rajnandgaon.</span>
+      </footer>
+    </main>
+  </body>
+</html>
